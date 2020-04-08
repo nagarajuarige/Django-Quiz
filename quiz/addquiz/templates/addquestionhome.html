@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Questions</title>
+</head>
+<body>
+
+<center>
+    <h1>{{quizname}}</h1>
+    <form method="POST" action="{% url 'addquestion' %}">
+        {% csrf_token %}
+        <input name="quizname" hidden value="{{quizname}}">
+        Question: <input name="question">
+        Option1: <input name="op1">
+        Option2: <input name="op2">
+        Option3: <input name="op3">
+        Option4: <input name="op4">
+        Answer: <input name="ans">
+        <input type="submit">
+    </form>
+</center>
+
+</body>
+</html>

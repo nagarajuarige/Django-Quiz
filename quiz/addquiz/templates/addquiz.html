@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Quiz</title>
+</head>
+<body>
+
+<form method="POST" action="{% url 'addquiz' %}">
+    {% csrf_token %}
+    <label>Enter Quiz Name:</label>
+    <input type="text" name="quizname">
+    <input type="submit">Add Quiz</input>
+    {{error}}
+
+</form>
+</body>
+</html>
